@@ -8,7 +8,7 @@ import envs from 'envs';
 import qs from 'qs'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, match, RoutingContext } from 'react-router';
+import { Router, match, RouterContext } from 'react-router';
 import { routes } from './build/routes';
 import settings from './build/shared/settings';
 import ReactDOMStream from 'react-dom-stream/server';
@@ -58,13 +58,10 @@ const appRoutes = (app) => {
               <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
               <meta name="viewport" content="width=device-width, 
                 initial-scale=1, maximum-scale=1, user-scalable=no"/>
-              <link rel=”preload” as="stylesheet" type="text/css"
-                href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-              <link rel=”preload” as="stylesheet" type="text/css" 
-                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-              <link async href='https://fonts.googleapis.com/css?family=Bitter' 
-                rel='stylesheet' type='text/css'/>
-              <link rel=”preload” as="stylesheet" href="/app.css" />
+              <link async href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'/>
+              <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" />
+             <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+             <link rel="stylesheet" type="text/css" href="/app.css" />
                 <title>${settings.title}</title>
                 </head>
                  <script>
@@ -73,7 +70,7 @@ const appRoutes = (app) => {
                 <body><div id="app">`);
                  const stream = ReactDOMStream.renderToString(
                  <Provider store={store}>
-                   <RoutingContext {...props} />
+                   <RouterContext {...props} />
                  </Provider>);
                  stream.pipe(res, {end: false});
                  stream.on("end", ()=> {

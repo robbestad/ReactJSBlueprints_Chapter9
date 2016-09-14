@@ -26,7 +26,7 @@ var Error = function (_React$Component) {
   function Error() {
     _classCallCheck(this, Error);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Error).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Error.__proto__ || Object.getPrototypeOf(Error)).apply(this, arguments));
   }
 
   _createClass(Error, [{

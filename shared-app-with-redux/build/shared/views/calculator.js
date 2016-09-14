@@ -26,7 +26,7 @@ var Calculator = function (_React$Component) {
   function Calculator() {
     _classCallCheck(this, Calculator);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Calculator).call(this));
+    var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this));
 
     _this.state = {};
     _this.state._input = 0;

@@ -24,7 +24,7 @@ var Posts = function (_Component) {
   function Posts() {
     _classCallCheck(this, Posts);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Posts).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Posts.__proto__ || Object.getPrototypeOf(Posts)).apply(this, arguments));
   }
 
   _createClass(Posts, [{
