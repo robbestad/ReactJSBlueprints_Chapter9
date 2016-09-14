@@ -1,10 +1,10 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -24,7 +24,7 @@ var FontAwesome = function (_React$Component) {
   function FontAwesome() {
     _classCallCheck(this, FontAwesome);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(FontAwesome).apply(this, arguments));
+    return _possibleConstructorReturn(this, (FontAwesome.__proto__ || Object.getPrototypeOf(FontAwesome)).apply(this, arguments));
   }
 
   _createClass(FontAwesome, [{
@@ -38,6 +38,7 @@ var FontAwesome = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = FontAwesome;
+
 
 FontAwesome.defaultProps = { icon: '' };
 FontAwesome.propTypes = {

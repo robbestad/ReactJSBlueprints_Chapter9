@@ -1,10 +1,10 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -26,7 +26,7 @@ var Calculator = function (_React$Component) {
   function Calculator() {
     _classCallCheck(this, Calculator);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Calculator).call(this));
+    var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this));
 
     _this.state = {};
     _this.state._input = 0;
@@ -103,8 +103,18 @@ var Calculator = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Col,
           { md: 12 },
-          _react2.default.createElement(_reactBootstrap.Input, { type: 'text', className: 'calcInput', ref: 'calcInput', defaultValue: '0',
-            onChange: this.handleChange.bind(this), value: this.state._input }),
+          _react2.default.createElement(
+            _reactBootstrap.FormGroup,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.InputGroup,
+              { className: 'calcInput' },
+              _react2.default.createElement(_reactBootstrap.FormControl, {
+                ref: 'calcInput',
+                onChange: this.handleChange.bind(this), value: this.state._input,
+                type: 'text' })
+            )
+          ),
           _react2.default.createElement(
             _reactBootstrap.Button,
             { className: 'calc', onClick: this.handleClear.bind(this) },
