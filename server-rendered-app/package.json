@@ -6,6 +6,11 @@
     "type": "git",
     "url": "https://github.com/svenanders/ReactJSBlueprints_Chapter9"
   },
+  "author": {
+    "name": "Sven Anders Robbestad",
+    "email": "sven@robbestad.com",
+    "url": "https://www.robbestad.com"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\"",
@@ -19,11 +24,6 @@
     "predeploy": "npm run build",
     "deploy": "npm run convert",
     "postdeploy": "echo Ready to deploy. Commit your changes and run git push heroku master"
-  },
-  "author": {
-    "name": "Sven Anders Robbestad",
-    "email": "sven@robbestad.com",
-    "url": "http://www.robbestad.com"
   },
   "license": "ISC",
   "devDependencies": {
